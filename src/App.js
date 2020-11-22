@@ -1,6 +1,7 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Link, Switch, useLocation, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
+
 
 function App() {
     const location = useLocation();
@@ -14,16 +15,18 @@ function App() {
     return (
 
         <div>
-            <NavTabs />
-            <AnimatePresence exitBeforeEnter>
-                <Switch location={location} key={location.pathname}>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/About" component={About} />
-                    <Route exact path="/Projects" component={Projects} />
-                    <Route exact path="/Skills" component={Skills} />
-                </Switch>
-            </AnimatePresence>
-            <Footer />
+            <Suspense fallback={<h5>Loading…</h5>}>
+                <NavTabs />
+                <AnimatePresence exitBeforeEnter>
+                    <Switch location={location} key={location.pathname}>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/About" component={About} />
+                        <Route exact path="/Projects" component={Projects} />
+                        <Route exact path="/Skills" component={Skills} />
+                    </Switch>
+                </AnimatePresence>
+                <Footer />
+            </Suspense>
         </div>
     );
 }
