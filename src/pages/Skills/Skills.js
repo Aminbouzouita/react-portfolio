@@ -1,4 +1,7 @@
 import React from 'react';
+import { motion } from "framer-motion"
+import { useHistory , useLocation, useRouteMatch } from 'react-router-dom';
+import "./style.css";
 import jqueryLogo from "./../../assets/img/295-2954193_jquery-logo-transparent-background-hd-png-download.png";
 import reactLogo from "./../../assets/img/logo512.png";
 import mysqlLogo from "./../../assets/img/unnamed.png";
@@ -12,8 +15,27 @@ import phplogo from "./../../assets/img/6621995_preview.png";
 
 export default function Skills() {
 
+  const pageVariants = {
+    in: {
+      opacity: 1,
+      y: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      y: "-100%",
+      scale: 0.8
+    }
+  }
+
+ 
   return (
-    <div className="posts">
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      className="posts">
         <h1 className="content-subhead">SKILLS</h1>
         <section className="post">
           <div className="skills post-description">
@@ -28,7 +50,7 @@ export default function Skills() {
             <img alt="" className="img-skills" src={reactLogo} /><p id="reactlogotext">React</p>
           </div>
         </section>
-    </div>
+    </motion.div>
   );
 }
 

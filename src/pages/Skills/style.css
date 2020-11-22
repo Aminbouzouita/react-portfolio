@@ -1,0 +1,26 @@
+.skills{
+    text-align: center;
+}
+.img-skills{
+    margin-right: 125px;
+    height:200px;
+    width:210px;
+}
+#reactlogotext {
+    font-size: 36px;
+    font-style: italic;
+    margin-left: 476px;
+    color: black;
+}
+
+#mongodblogo{
+margin-top:30px ;
+}
+.post{
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 70px;
+}
+.posts{
+    text-align: center;
+}
