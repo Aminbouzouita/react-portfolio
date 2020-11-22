@@ -1,0 +1,13 @@
+body{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./assets/img/bg.jpg);
+}
+.content-subhead{
+    margin-top: 120px;
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
