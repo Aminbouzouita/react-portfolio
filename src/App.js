@@ -1,4 +1,5 @@
 import React, { lazy } from "react";
+import { BrowserRouter as Router, Link, Switch, useLocation, Route } from "react-router-dom";
 
 
 function App() {
@@ -10,6 +11,19 @@ function App() {
     const NavTabs = lazy(() => import("./components/NavTabs/NavTab/NavTab"));
     const Footer = lazy(() => import("./components/Footer/Footer"))
 
+    return (
+
+        <div>
+            <NavTabs />
+            <Switch >
+                <Route exact path="/" component={Home} />
+                <Route exact path="/About" component={About} />
+                <Route exact path="/Projects" component={Projects} />
+                <Route exact path="/Skills" component={Skills} />
+            </Switch>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
