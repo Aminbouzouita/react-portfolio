@@ -1,0 +1,12 @@
+.posts{
+    text-align: center;
+}
+.introduction{
+    color: white;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 300px;
+    text-align: justify;
+    font-size: 26px;
+    line-height: 30px;
+}
