@@ -1,0 +1,19 @@
+.nav-links{
+    position: relative;
+    display: inherit;
+    font-size: 20px;
+}
+
+.nav-link{
+    color:white;
+}
+
+.nav-link:hover,
+.nav-link:active{
+    color:gray;
+}
+.navbar{   
+    margin-left: -43rem;
+}
+
+
