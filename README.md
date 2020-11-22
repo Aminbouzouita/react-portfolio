@@ -12,7 +12,7 @@ npm intall
 ## Usage
 npm start
 ## badges
-![License](https://img.shields.io/badge/javascript-81.2-blue) 
+![License](https://img.shields.io/badge/javascript-76.1-blue) 
 #### URL Github Repo:
 https://aminbouzouita.github.io/react-portfolio/.
 #### App Link On Heroku:
