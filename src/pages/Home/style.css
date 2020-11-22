@@ -1,0 +1,19 @@
+.project{
+    height: 393px;
+    width: 335px;
+    position: relative;
+    margin-top: 116px;
+    margin-left: 630px;
+    background-color: white;
+    opacity: 50%;
+}
+.name{
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-top: 110px;
+    margin-left: -275px;
+}
+.posts{
+    text-align: center;
+}
