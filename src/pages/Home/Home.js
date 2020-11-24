@@ -100,7 +100,7 @@ export default function Home() {
               <h1>Bouzouita</h1>
                <p>__</p>
                <p>____</p>
-               <h1>Full Stuck</h1>
+               <h1>Full Stack</h1>
                 <h1>Web Developper</h1>
               </div>
           </motion.div>
