@@ -29,8 +29,44 @@ function App() {
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
             </Helmet>
             <Suspense fallback={<h5>Loading…</h5>}>
-                <NavTabs />
-                <AnimatePresence exitBeforeEnter>
+            <AnimatePresence exitBeforeEnter>
+          <div className="App">
+            <section>
+              <img
+                src={bg}
+                id="bg"
+                alt="test"
+                className="parallax"
+                style={{
+                  transform: `translateY(${offset * 1}px)`,
+                }}
+              />
+              <Navbar />
+              <img
+                src={sun}
+                id="sun"
+                alt="sun"
+                style={{
+                  transform: `translateX(${offset * 1}px)`,
+                }}
+              /><img
+                src={airplane}
+                id="airplane"
+                alt="airplane"
+                style={{
+                  transform: `translateX(${offset * 5}px)`,
+                }}
+              />
+              <img
+                src={buildings}
+                id="buildings"
+                alt="buildings"
+                style={{
+                  transform: `translateY(${offset * 1}px)`,
+                }}
+              />
+            </section>
+            <Footer />
                     <Switch key={location.pathname}>
                         <Link
                             exact path="/"
@@ -45,8 +81,8 @@ function App() {
                             exact path="/Skills"
                             component={Skills} />
                     </Switch>
+                    </div>
                 </AnimatePresence>
-                <Footer />
             </Suspense>
         </>
     );
