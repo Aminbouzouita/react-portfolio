@@ -1,19 +1,21 @@
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Link, Switch, useLocation, Route } from "react-router-dom";
-import { AnimatePresence } from "framer-motion"
-
+import React, { Suspense, useEffect, useState } from "react";
+import { BrowserRouter as  Link, Switch, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Helmet } from 'react-helmet';
+import "./style.css";
+import bg from "./assets/img/bg.jpg";
+import Projects from "./pages/Projects/Projects";
+import Skills from "./pages/Skills/Skills";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import sun from "./assets/img/sun.jpg"
+import buildings from "./assets/img/buildings.jpg"
+import airplane from "./assets/img/aiplane.jpeg"
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-    const location = useLocation();
-    const Projects = lazy(() => import("./pages/Projects/Projects"));
-    const Skills = lazy(() => import("./pages/Skills/Skills"));
-    const About = lazy(() => import("./pages/About/About"));
-    const Home = lazy(() => import("./pages/Home/Home"));
-    const NavTabs = lazy(() => import("./components/NavTabs/NavTab/NavTab"));
-    const Footer = lazy(() => import("./components/Footer/Footer"))
-
     return (
-
         <div>
             <Suspense fallback={<h5>Loading…</h5>}>
                 <NavTabs />
