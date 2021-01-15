@@ -16,7 +16,18 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
-        <div>
+        <>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta property="og:title" content="Amin Bouzouita" />
+        <meta name="author" content="Amin Bouzouita" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="description" content="Amin Bouzouita | Full Stack Web Developer | Located in Orange County, CA" />
+        <meta property="og:description" content="Full Stack Web Developer" />
+        <title>Amin Bouzouita | Full Stack Web Developer</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+      </Helmet>
             <Suspense fallback={<h5>Loading…</h5>}>
                 <NavTabs />
                 <AnimatePresence exitBeforeEnter>
@@ -29,7 +40,7 @@ function App() {
                 </AnimatePresence>
                 <Footer />
             </Suspense>
-        </div>
+        </>
     );
 }
 
