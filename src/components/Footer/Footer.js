@@ -7,10 +7,12 @@ import linkedlnLogo from "./../../assets/img/ce093c7214ad357bb665cfd2f66a8b6b.pn
 import Link from "../Link/Link";
 import Image from "../Image/Image";
 import Container from "../Container/Container";
+import FooterText from "./../FooterComponents/FooterText";
+import ContactWrap from "./../FooterComponents/ContactWrap";
 function Footer() {
     return (
         <Container className="Container">
-             <ContactWrap className="row footer">
+            <ContactWrap className="row footer">
                 <Link href="https://github.com/Aminbouzouita">
                     <Image
                         className="contact-links"
@@ -38,8 +40,11 @@ function Footer() {
                         alt="contact-logos"
                     />
                 </Link>
-                </ContactWrap>
-          </Container> 
+            </ContactWrap>
+            <FooterText
+                className="text-footer"
+                text="&copy; 2020 Amin Bouzouita" />
+        </Container>
     );
 }
 
