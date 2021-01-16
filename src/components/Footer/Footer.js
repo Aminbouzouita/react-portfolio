@@ -10,6 +10,7 @@ import Container from "../Container/Container";
 function Footer() {
     return (
         <Container className="Container">
+             <ContactWrap className="row footer">
                 <Link href="https://github.com/Aminbouzouita">
                     <Image
                         className="contact-links"
@@ -37,6 +38,7 @@ function Footer() {
                         alt="contact-logos"
                     />
                 </Link>
+                </ContactWrap>
           </Container> 
     );
 }
