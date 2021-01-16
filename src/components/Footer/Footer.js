@@ -6,11 +6,10 @@ import mailLogo from "./../../assets/img/8fc37b74b608a622588fbaa361485f32.png";
 import linkedlnLogo from "./../../assets/img/ce093c7214ad357bb665cfd2f66a8b6b.png";
 import Link from "../Link/Link";
 import Image from "../Image/Image";
-
+import Container from "../Container/Container";
 function Footer() {
     return (
-        <>
-
+        <Container className="Container">
                 <Link href="https://github.com/Aminbouzouita">
                     <Image
                         className="contact-links"
@@ -38,7 +37,7 @@ function Footer() {
                         alt="contact-logos"
                     />
                 </Link>
-          </> 
+          </Container> 
     );
 }
 
