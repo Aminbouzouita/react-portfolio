@@ -1,19 +1,67 @@
-.nav-links{
-    position: relative;
-    display: inherit;
-    font-size: 20px;
+.navbar{
+    margin-top: -188vh;
+    list-style: none;
+    width: 90%;
+}
+#items{
+   position: fixed;
+}
+#name{
+       color: white;
+}
+#name:hover{
+   text-decoration: none;
+}
+.nameNavbar {
+   margin-top: 10px;
+   margin-left: 60px;
+   margin-right: 129vh;
+   font-weight: bold;
+   font-size:20px ;   
+   font-family: cursive;
+   text-decoration: none;
+
+}
+.nameNavbar:hover {
+ transform: rotateX(360deg) scale(1.4);
+ -moz-transformtransform: rotateX(360deg) scale(1.4);
+ -o-transformtransform: rotateX(360deg) scale(1.4);
+ -ms-transformtransform: rotateX(360deg) scale(1.4);
+ transition:1.5s ease-in-out;
+ -moz-transition:1.5s ease-in-out;
+ -o-transition:1.5s ease-in-out;
+ transition:1.5s ease-in-out;
 }
 
-.nav-link{
-    color:white;
-}
+#home , #about , #projects , #skills {
+   margin-left: -20px;
+   color: white;
+   background-color: transparent;
+   border: none;
+   }
 
-.nav-link:hover,
-.nav-link:active{
-    color:gray;
+#about:hover ,#home:hover ,#projects:hover ,#skills:hover {
+color:black;
+text-decoration: overline;
 }
-.navbar{   
-    margin-left: -43rem;
+@media only screen and (max-device-width: 480px) {
+   .navbar{
+       margin-top: -370vh;
+     
+  }
+   .nameNavbar {
+       margin-top: 10px;
+       margin-left: 0px;
+       margin-right: 7px;
+       font-weight: bold;
+       font-size:20px ;   
+       font-family: cursive;
+       text-decoration: none;
+   
+   }
+   #home , #about , #projects , #skills {
+       color: white;
+       background-color: transparent;
+       border: none;
+       }
 }
-
-
