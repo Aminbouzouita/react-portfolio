@@ -1,0 +1,74 @@
+ .text-Container{
+    max-width: 100%;
+  }
+ .text-Fix{
+    color:black;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: sans-serif;
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .animation-text{
+    color:black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  
+  .textAnimation1 {
+    animation: textAnimation1;
+  }
+  .textAnimation2 {
+    animation: textAnimation2;
+  }
+  
+  .textAnimation1, .textAnimation2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 13s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+  }
+  
+  .textAnimation1::after, .textAnimation2::after{
+    content: "|";
+    color: #8ecccc;
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(1, end);
+  }
+   
+  @keyframes caret {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textAnimation1 {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    10%, 40% {
+      width: 14.5em;
+    }
+  }
+  @keyframes textAnimation2 {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    
+    60%, 90% {
+      width: 15em;
+    }
+  }
