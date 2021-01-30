@@ -1,109 +1,62 @@
 import React from 'react';
-import { motion } from "framer-motion"
-import { useHistory , useLocation, useRouteMatch } from 'react-router-dom';
 import "./style.css";
-import project1 from "./../../assets/img/project3.png"
-import project2 from "./../../assets/img/project2.png"
-import project3 from "./../../assets/img/project1.png";
-import project4 from "./../../assets/img/project6.png"
-import project5 from "./../../assets/img/project5.png"
-import project6 from "./../../assets/img/project4.png"
-
+import project1 from "./../../assets/img/project1.png";
+import project2 from "./../../assets/img/project2.png";
+import project3 from "./../../assets/img/project3.png";
+import project4 from "./../../assets/img/project4.png";
+import project5 from "./../../assets/img/project5.png";
+import project6 from "./../../assets/img/project6.png";
+import ProjectCard from '../../components/ProjectComponents/ProjectCard';
 export default function Projects() {
-  console.log(useHistory());
-
-  const pageVariants = {
-    in: {
-      opacity: 1,
-      y: 0
-    },
-    out: {
-      opacity: 0,
-      y: "-100%"
-    }
-  }
-  const pageVariantsleft = {
-    in: {
-      opacity: 1,
-      x: 0
-    },
-    out: {
-      opacity: 0,
-      x: "-100%"
-    }
-  }
-  const pageVariantsright = {
-    in: {
-      opacity: 1,
-      x: 0
-    },
-    out: {
-      opacity: 0,
-      x: "100%"
-    }
-  }
-  const pageTransition = {
-    type: "tween",
-    ease: "anticipate",
-    duration: "1"
-  }
 
   return (
-    <main>
+    <div className="row app">
+            <ProjectCard 
+            image={project1}
+            text="A web application build using MERN (MongoDB,Express,React,NodeJs), allows the user to
+                  track their inventory in their stores or warehouses to be able to make smarter business decisions. It will also help to keep
+                  on top of diminishing stock."
+            view="https://github.com/spencer-alan/project-3"
+            demo="https://inventoryproject3.herokuapp.com/"
+             />
+              <ProjectCard 
+            image={project2}
+            text="A web application build using JQuery, Express, HTML, CSS3, allow user to search for a flight ticket, AIRBNB stays and
+            attractions places from real API (Application programming interface)."
+            view="https://github.com/JL202/BootCamp-Project"
+            demo="https://jl202.github.io/BootCamp-Project/indexflights.html"
+             />
+            <ProjectCard 
+            image={project3}
+            text="A Full stack web application build using NodeJs, Express, HTML, CSS3 allows user to Track
+            saved Workouts ,add and update exercices."
+            view="https://github.com/Aminbouzouita/Workout_Tracker"
+            demo="http://workouttrackerandstat.herokuapp.com"
+             />
     
-      <section className="posts"> 
-       <h1 className="content-subhead">PROJECTS</h1>
-        <div className="row skills post-description">
-          <motion.div initial="out"
-            animate="in"
-            exit="out"
-            variants={pageVariantsleft}
-            transition={{ pageTransition }}
-            className="col-6" 
-            >
-            <div className="show-imag">
-              <img className="img-portfolio" alt="WorkoutProject" src={project1}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/Workout_Tracker">View</a>
-              <a class="demo" href="https://workouttrackerandstat.herokuapp.com/stats">Demo</a>
-
-            </div>
-            <div className="show-imag">
-              <img className="img-portfolio" alt="BurgersHandelbars" src={project2}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/Burgers-Handlebars">View</a>
-              <a class="demo" href="https://burgers-handlebar.herokuapp.com/">Demo</a>
-            </div>
-            <div className="show-imag">
-              <img className="img-portfolio" alt="DayPlanner" src={project3}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/Day-planner">View</a>
-              {/* <a class="demo" href="">Demo</a> */}
-            </div>
-          </motion.div>
-          <motion.div
-            initial="out"
-            animate="in" exit="out"
-            variants={pageVariantsright}
-            transition={{ pageTransition }}
-            className="col-6"
-            >
-            <div className="show-imag">
-              <img className="img-portfolio" alt="project2" src={project4}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/Project_2">View</a>
-              <a class="demo" href="https://e-power.herokuapp.com/">Demo</a>
-            </div>
-            <div className="show-imag">
-              <img className="img-portfolio" alt="" src={project5}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/Note-Taker">View</a>
-              <a class="demo" href="https://note-taker-hmw.herokuapp.com/">Demo</a>
-            </div>
-            <div className="show-imag">
-              <img className="img-portfolio" alt="" src={project6}></img>
-              <a class="view" href="https://github.com/Aminbouzouita/TeamGenerator">View</a>
-              {/* <a class="demo" href="">Demo</a> */}
-            </div>
-
-          </motion.div>
-        </div>
-      </section>
-    </main>
+    
+            <ProjectCard 
+            image={project4}
+            text="A web application build using NodeJs, Express, MySQL, HTML, CSS3 allow user to sign up, sign in, add, update, Track employees,
+            save working date, time, accounts monthly working time and new balance."
+            view="https://github.com/Aminbouzouita/Project_2"
+            demo="https://e-power.herokuapp.com/"
+             />
+              <ProjectCard 
+            image={project5}
+            text="A Full stack web application build using MERN (MongoDB,Express,React,NodeJs), allows user to search
+            for a book from GoogleBook and save it to a Mongo Database and the option to remove it."
+            view="https://github.com/Aminbouzouita/Google-Books-React-Search"
+            demo="https://goooglebookssearch.herokuapp.com/"
+             />
+            <ProjectCard 
+            image={project6}
+            text="A Full stack web application that allows user to add expenses 
+            and deposits to their budget with or without a connection."
+            view="https://github.com/Aminbouzouita/Online-Offline-Budget-Tracker"
+            demo="https://offline-progressive-budget.herokuapp.com/"
+             />
+    
+    </div>
   );
 }
