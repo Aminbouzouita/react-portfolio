@@ -1,51 +1,11 @@
-.img-portfolio{
-    position: relative;
-    margin-bottom: 30px;
-    margin-right: 50px;
-    height: 180px;
-    width: 300px;
-    border-radius: 15px;
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-     transition:.5s;
-     transform: rotateX(150deg);
-
+.container
+{
+ text-align:center;
 }
-.show-imag{
-     transform: rotateX(150deg);
-
-}
-.img-portfolio:hover {
-     filter: none;
-     -webkit-filter: grayscale(0%);
-   
-}
-
-.demo{
-     display: none;
-}
-.view{
-     display: none;
+.app{
+margin-top: -105vh;
 }
 
 
-.img-portfolio:hover .view {
-     margin-top: 151px;
-     margin-left: -183px;
-     display: inline-block;
-     position: absolute;
- }
- .img-portfolio:hover .demo {
-     margin-top: 151px;
-     margin-left: -258px;
-     display: inline-block;
-     position: absolute;
- }
-      
- .posts{
-      text-align: center;
- }
+
+
