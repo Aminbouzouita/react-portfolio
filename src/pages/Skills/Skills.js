@@ -12,11 +12,13 @@ import php from "./../../assets/img/php.png";
 import asp from "./../../assets/img/aspnet.png";
 import bootstrap from "./../../assets/img/bootstrap.png";
 import redux from "./../../assets/img/redux.png";
+import SlideTop from "../../components/animations/SlideTop";
 import SkillsWrap from "../../components/SkillsComponents/SkillsWrap";
 import Image from "../../components/Image/Image"
 export default function Skills() {
   return (
-    <SkillsWrap>
+    <SlideTop className="wrap">
+      <SkillsWrap>
         <Image
           alt="SkillLogo"
           className="img-skills"
@@ -49,23 +51,24 @@ export default function Skills() {
           alt="SkillLogo"
           className="img-skills"
           src={mongodbLogo} />
-        <Image 
-        alt="SkillLogo" 
-        className="img-skills" 
-        src={php} />
-        <Image 
-        alt="SkillLogo" 
-        className="img-skills" 
-        src={redux} />
-        <Image 
-        alt="SkillLogo" 
-        className="img-skills" 
-        src={asp} />
-        <Image 
-        alt="SkillLogo" 
-        className="img-skills" 
-        src={bootstrap} />
-    </SkillsWrap>
+        <Image
+          alt="SkillLogo"
+          className="img-skills"
+          src={php} />
+        <Image
+          alt="SkillLogo"
+          className="img-skills"
+          src={redux} />
+        <Image
+          alt="SkillLogo"
+          className="img-skills"
+          src={asp} />
+        <Image
+          alt="SkillLogo"
+          className="img-skills"
+          src={bootstrap} />
+      </SkillsWrap>
+    </SlideTop>
   );
 }
 
