@@ -12,10 +12,11 @@ import php from "./../../assets/img/php.png";
 import asp from "./../../assets/img/aspnet.png";
 import bootstrap from "./../../assets/img/bootstrap.png";
 import redux from "./../../assets/img/redux.png";
+import SkillsWrap from "../../components/SkillsComponents/SkillsWrap";
 import Image from "../../components/Image/Image"
 export default function Skills() {
   return (
-   <>
+    <SkillsWrap>
         <Image
           alt="SkillLogo"
           className="img-skills"
@@ -64,7 +65,7 @@ export default function Skills() {
         alt="SkillLogo" 
         className="img-skills" 
         src={bootstrap} />
-    </>
+    </SkillsWrap>
   );
 }
 
