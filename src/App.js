@@ -15,6 +15,18 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const location = useLocation();
+  const [ref, setRef] = useState(0);
+  const [offset, setOffset] = useState(0)
+  useEffect(() => {
+    function handleScroll() {
+      setOffset(window.pageYOffset)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [setRef])
     return (
         <>
             <Helmet>
